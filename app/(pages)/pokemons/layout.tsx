@@ -1,5 +1,4 @@
 import { Inter } from 'next/font/google';
-import '@/app/globals.css';
 import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -14,5 +13,5 @@ export default function PokemonsLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className='bg-red-500 p-10 '>{children}</div>;
+  return <div>{children}</div>;
 }

@@ -1,7 +1,7 @@
 import { getPokemonList } from '@/app/api/getPokemonList/route';
 import { PokemonListObject } from '@/app/lib/definitions';
 
-export default async function Home() {
+export default async function Pokemon() {
   const pokemonList: PokemonListObject[] = await getPokemonList({ limit: 15 });
 
   return (
