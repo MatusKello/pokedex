@@ -4,3 +4,5 @@ export type PokemonListObject = {
 };
 
 export type GetPokemonListArg = { limit: number };
+
+export type FetchedPokemonProps = { name: string | string[] };
