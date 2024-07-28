@@ -13,7 +13,10 @@ function Navigation() {
   return (
     <>
       <div>
-        <GiHamburgerMenu onClick={() => setIsOpen(true)} />
+        <GiHamburgerMenu
+          className='cursor-pointer'
+          onClick={() => setIsOpen(true)}
+        />
       </div>
       <Drawer open={isOpen} onClose={handleClose}>
         <Drawer.Header title='MENU' titleIcon={() => <></>} />

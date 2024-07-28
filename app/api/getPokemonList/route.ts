@@ -1,8 +1,8 @@
 import { GetPokemonListArg } from '@/app/lib/definitions';
 
-export async function getPokemon(id: number) {
+export async function getPokemon(name: string) {
   try {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -10,7 +10,6 @@ export async function getPokemon(id: number) {
     return data;
   } catch (error) {
     console.error('Failed to fetch pokemon', error);
-    throw new Error('Failed to fetch pokemon');
   }
 }
 
